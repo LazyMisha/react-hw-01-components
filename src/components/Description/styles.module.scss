@@ -1,0 +1,27 @@
+.description {
+  text-align: center;
+  background-color: aliceblue;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.tag {
+  color: grey;
+}
+
+.location {
+  color: grey;
+}

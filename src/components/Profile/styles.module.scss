@@ -1,64 +1,7 @@
 .profile {
-  display: inline-block;
   background-color: #e0e0e0;
-  text-align: center;
   border: 1px solid grey;
   padding: 100px;
-  width: 700px;
-
-  .description {
-    display: inline-block;
-    background-color: aliceblue;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    width: 600px;
-
-    .avatar {
-      object-fit: cover;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-    }
-
-    .name {
-      font-weight: bold;
-    }
-
-    .tag {
-      color: grey;
-    }
-
-    .location {
-      color: grey;
-    }
-  }
-}
-
-.stats {
-  margin: 0;
-  padding-left: 0;
-
-  li {
-    width: 200px;
-    min-height: 100px;
-    display: inline-block;
-
-    span {
-      display: block;
-    }
-  }
-
-  .label {
-    color: grey;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-  }
-
-  .quantity {
-    font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-  }
+  width: 428px;
+  margin: 0 auto;
 }
