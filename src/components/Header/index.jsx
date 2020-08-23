@@ -9,14 +9,14 @@ const Header = () => {
         <li className={styles.link}>
           <h3>HW 01</h3>
           <span>
-            <Link to="/react-hw-components/profile">Profile</Link>
+            <Link to="/react-hw-01-components/profile">Profile</Link>
           </span>
           <span>
-            <Link to="/react-hw-components/statistics">Statistics</Link>
+            <Link to="/react-hw-01-components/statistics">Statistics</Link>
           </span>
 
           <span>
-            <Link to="/react-hw-components/friends">Friends</Link>
+            <Link to="/react-hw-01-components/friends">Friends</Link>
           </span>
         </li>
         <li className={styles.link}>

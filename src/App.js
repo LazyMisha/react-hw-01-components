@@ -14,12 +14,12 @@ const App = () => {
         <>
           <Header />
           <Route
-            path="/react-hw-components/statistics"
+            path="/react-hw-01-components/statistics"
             render={() => <Statistics title="Upload Stats" stats={data} />}
           />
-          <Route path="/react-hw-components/profile" component={Profile} />
+          <Route path="/react-hw-01-components/profile" component={Profile} />
           <Route
-            path="/react-hw-components/friends"
+            path="/react-hw-01-components/friends"
             render={() => <FriendList friends={friendList} />}
           />
         </>
