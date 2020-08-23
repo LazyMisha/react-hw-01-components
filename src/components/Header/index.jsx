@@ -14,9 +14,11 @@ const Header = () => {
           <span>
             <Link to="/react-hw-01-components/statistics">Statistics</Link>
           </span>
-
           <span>
             <Link to="/react-hw-01-components/friends">Friends</Link>
+          </span>
+          <span>
+            <Link to="/react-hw-01-components/transactions">Transactions</Link>
           </span>
         </li>
         <li className={styles.link}>
