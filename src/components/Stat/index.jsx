@@ -1,12 +1,13 @@
 import React from "react";
+import uuid from "react-uuid";
 import styles from "./styles.module.scss";
 
-const Statistic = ({ stats }) => {
+const Stat = ({ stats }) => {
   return (
     <div>
       <ul className={styles.stats}>
         {Object.entries(stats).map((stat) => (
-          <li>
+          <li key={uuid()}>
             <span className={styles.label}>
               {stat[0].charAt(0).toUpperCase() + stat[0].slice(1)}
             </span>
@@ -18,4 +19,4 @@ const Statistic = ({ stats }) => {
   );
 };
 
-export default Statistic;
+export default Stat;

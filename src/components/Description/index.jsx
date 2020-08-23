@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import Statistic from "../Statistic";
+import Stat from "../Stat";
 
 const Description = ({ avatar, name, tag, location, stats }) => {
   return (
@@ -11,7 +11,7 @@ const Description = ({ avatar, name, tag, location, stats }) => {
         <p className={styles.tag}>@{tag}</p>
         <p className={styles.location}>{location}</p>
       </div>
-      <Statistic stats={stats} />
+      <Stat stats={stats} />
     </div>
   );
 };

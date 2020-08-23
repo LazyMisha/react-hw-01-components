@@ -1,0 +1,22 @@
+.header {
+  background: whitesmoke;
+}
+
+.links {
+  display: flex;
+  padding-left: 0;
+}
+
+.link {
+  text-align: center;
+  flex: auto;
+}
+
+.link > span {
+  display: block;
+  position: relative;
+}
+
+h3 {
+  margin: 0;
+}
