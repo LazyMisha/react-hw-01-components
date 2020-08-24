@@ -8,6 +8,7 @@ import Statistics from "./components/HW_01/Statistics";
 import Header from "./components/Header";
 import FriendList from "./components/HW_01/FriendList";
 import TransactionHistory from "./components/HW_01/TransactionHistory";
+import Feedback from "./components/HW_02/Feedback";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             path="/react-hw-01-components/transactions"
             render={() => <TransactionHistory items={transactions} />}
           />
+          <Route path="/react-hw-01-components/feedback" component={Feedback} />
         </>
       </Switch>
     </Router>

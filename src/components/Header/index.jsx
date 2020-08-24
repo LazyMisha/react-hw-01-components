@@ -24,7 +24,7 @@ const Header = () => {
         <li className={styles.link}>
           <h3>HW 02</h3>
           <span>
-            <Link to="#">Solution</Link>
+            <Link to="/react-hw-01-components/feedback">Feedback</Link>
           </span>
         </li>
       </ul>
