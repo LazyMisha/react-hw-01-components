@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import data from "./statistical-data.json";
-import friendList from "./friend-list.json";
-import transactions from "./transaction-history.json";
-import Profile from "./components/Profile";
-import Statistics from "./components/Statistics";
+import data from "./resources/statistical-data.json";
+import friendList from "./resources/friend-list.json";
+import transactions from "./resources/transaction-history.json";
+import Profile from "./components/HW_01/Profile";
+import Statistics from "./components/HW_01/Statistics";
 import Header from "./components/Header";
-import FriendList from "./components/FriendList";
-import TransactionHistory from "./components/TransactionHistory";
+import FriendList from "./components/HW_01/FriendList";
+import TransactionHistory from "./components/HW_01/TransactionHistory";
 
 const App = () => {
   return (
