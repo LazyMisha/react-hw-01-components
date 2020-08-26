@@ -14,7 +14,7 @@ const FriendList = ({ friends }) => {
             <span
               className={styles.status}
               style={{ backgroundColor: getStatusColor(friend.isOnline) }}
-            ></span>
+            />
             <img className={styles.avatar} src={friend.avatar} alt="" />
             <p className={styles.name}>{friend.name}</p>
           </li>

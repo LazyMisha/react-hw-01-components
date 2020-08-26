@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import data from "./resources/statistical-data.json";
 import friendList from "./resources/friend-list.json";
 import transactions from "./resources/transaction-history.json";
-import Profile from "./components/HW_01/Profile";
-import Statistics from "./components/HW_01/Statistics";
+import Profile from "./components/HW_01/Task1/Profile";
+import Statistics from "./components/HW_01/Task2/Statistics";
 import Header from "./components/Header";
-import FriendList from "./components/HW_01/FriendList";
-import TransactionHistory from "./components/HW_01/TransactionHistory";
-import Feedback from "./components/HW_02/Feedback";
+import FriendList from "./components/HW_01/Task3/FriendList";
+import TransactionHistory from "./components/HW_01/Task4/TransactionHistory";
+import Feedback from "./components/HW_02/Task1/Feedback";
 
 const App = () => {
   return (

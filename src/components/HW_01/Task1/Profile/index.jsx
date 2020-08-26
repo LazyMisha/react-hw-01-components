@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Description from "../Description";
-import user from "../../../resources/user.json";
+import user from "../../../../resources/user.json";
 import styles from "./styles.module.scss";
 
 class Profile extends Component {
