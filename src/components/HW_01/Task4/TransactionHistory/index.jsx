@@ -5,9 +5,11 @@ const TransactionHistory = ({ items }) => {
   return (
     <table className={styles.transactionHistory}>
       <thead>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
       </thead>
       <tbody>
         {items.map((item) => (

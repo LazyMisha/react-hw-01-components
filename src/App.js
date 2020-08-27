@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import FriendList from "./components/HW_01/Task3/FriendList";
 import TransactionHistory from "./components/HW_01/Task4/TransactionHistory";
 import Feedback from "./components/HW_02/Task1/Feedback";
+import Phonebook from "./components/HW_02/Task2/Phonebook";
 
 const App = () => {
   return (
@@ -30,6 +31,10 @@ const App = () => {
             render={() => <TransactionHistory items={transactions} />}
           />
           <Route path="/react-hw-01-components/feedback" component={Feedback} />
+          <Route
+            path="/react-hw-01-components/phonebook"
+            component={Phonebook}
+          />
         </>
       </Switch>
     </Router>

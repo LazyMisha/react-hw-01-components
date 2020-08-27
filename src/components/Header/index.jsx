@@ -26,6 +26,9 @@ const Header = () => {
           <span>
             <Link to="/react-hw-01-components/feedback">Feedback</Link>
           </span>
+          <span>
+            <Link to="/react-hw-01-components/phonebook">Phonebook</Link>
+          </span>
         </li>
       </ul>
     </div>
