@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
@@ -12,6 +13,15 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       <p>Positive feedack: {positivePercentage}%</p>
     </div>
   );
+};
+
+// doesn't work properly
+Statistics.prototypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
 
 export default Statistics;

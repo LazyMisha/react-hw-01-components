@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import uuid from "react-uuid";
 import "./styles.module.scss";
 
@@ -39,18 +40,22 @@ class Form extends Component {
           name="name"
           value={this.state.name}
           onChange={this.handleInputChange}
-        ></input>
+        />
         <label>Number</label>
         <input
           type="number"
           name="number"
           value={this.state.number}
           onChange={this.handleInputChange}
-        ></input>
+        />
         <button>Add contact</button>
       </form>
     );
   }
 }
+
+Form.prototypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Form;

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
+import PropTypes from "prop-types";
 
 const getColor = () => {
   return "#" + (Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6);
@@ -25,6 +26,11 @@ const Statistics = ({ title, stats }) => {
       </ul>
     </section>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Statistics;

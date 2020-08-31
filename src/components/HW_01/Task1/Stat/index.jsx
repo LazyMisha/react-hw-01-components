@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import uuid from "react-uuid";
 import styles from "./styles.module.scss";
 
@@ -17,6 +18,10 @@ const Stat = ({ stats }) => {
       </ul>
     </div>
   );
+};
+
+Stat.propTypes = {
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
 export default Stat;

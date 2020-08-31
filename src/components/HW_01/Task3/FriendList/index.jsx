@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
 
 const getStatusColor = (isOnline) => {
@@ -22,6 +23,10 @@ const FriendList = ({ friends }) => {
       </ul>
     </div>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
 };
 
 export default FriendList;
