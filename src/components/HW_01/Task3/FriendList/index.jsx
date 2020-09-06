@@ -7,20 +7,22 @@ const getStatusColor = (isOnline) => {
 };
 
 const FriendList = ({ friends }) => {
+  let friendElement = friends.map((friend) => {
+    return (
+      <li key={friend.id} className={styles.item}>
+        <span
+          className={styles.status}
+          style={{ backgroundColor: getStatusColor(friend.isOnline) }}
+        />
+        <img className={styles.avatar} src={friend.avatar} alt="" />
+        <p className={styles.name}>{friend.name}</p>
+      </li>
+    );
+  });
+
   return (
     <div className={styles.container}>
-      <ul className={styles.friendlist}>
-        {friends.map((friend) => (
-          <li key={friend.id} className={styles.item}>
-            <span
-              className={styles.status}
-              style={{ backgroundColor: getStatusColor(friend.isOnline) }}
-            />
-            <img className={styles.avatar} src={friend.avatar} alt="" />
-            <p className={styles.name}>{friend.name}</p>
-          </li>
-        ))}
-      </ul>
+      <ul className={styles.friendlist}>{friendElement}</ul>
     </div>
   );
 };

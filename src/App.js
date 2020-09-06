@@ -1,8 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import data from "./resources/statistical-data.json";
-import friendList from "./resources/friend-list.json";
-import transactions from "./resources/transaction-history.json";
 import Profile from "./components/HW_01/Task1/Profile";
 import Statistics from "./components/HW_01/Task2/Statistics";
 import Header from "./components/Header";
@@ -11,7 +8,7 @@ import TransactionHistory from "./components/HW_01/Task4/TransactionHistory";
 import Feedback from "./components/HW_02/Task1/Feedback";
 import Phonebook from "./components/HW_02/Task2/Phonebook";
 
-const App = () => {
+const App = (props) => {
   return (
     <Router>
       <Switch>
@@ -19,16 +16,34 @@ const App = () => {
           <Header />
           <Route
             path="/react-hw-01-components/statistics"
-            render={() => <Statistics title="Upload Stats" stats={data} />}
+            render={() => (
+              <Statistics
+                title={props.state.statisticsComponent.title}
+                stats={props.state.statisticsComponent.statisticalData}
+              />
+            )}
           />
-          <Route path="/react-hw-01-components/profile" component={Profile} />
+          <Route
+            path="/react-hw-01-components/profile"
+            render={() => (
+              <Profile user={props.state.profileComponent.profileUser} />
+            )}
+          />
           <Route
             path="/react-hw-01-components/friends"
-            render={() => <FriendList friends={friendList} />}
+            render={() => (
+              <FriendList
+                friends={props.state.friendListComponent.friendList}
+              />
+            )}
           />
           <Route
             path="/react-hw-01-components/transactions"
-            render={() => <TransactionHistory items={transactions} />}
+            render={() => (
+              <TransactionHistory
+                items={props.state.transactionHistoryComponent.transactions}
+              />
+            )}
           />
           <Route path="/react-hw-01-components/feedback" component={Feedback} />
           <Route

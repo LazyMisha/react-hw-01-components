@@ -13,6 +13,14 @@ class Feedback extends Component {
     positivePercentage: 0,
   };
 
+  updtaePositivePersentage = () => {
+    this.setState({
+      positivePercentage: Math.round(
+        (this.state.good / this.state.total) * 100
+      ),
+    });
+  };
+
   onLeaveFeedback = (event) => {
     let value = event.target.value;
     switch (value) {
@@ -22,13 +30,7 @@ class Feedback extends Component {
             good: this.state.good + 1,
             total: this.state.total + 1,
           },
-          function () {
-            this.setState({
-              positivePercentage: Math.round(
-                (this.state.good / this.state.total) * 100
-              ),
-            });
-          }
+          this.updtaePositivePersentage
         );
         break;
       case "neutral":
@@ -37,13 +39,7 @@ class Feedback extends Component {
             neutral: this.state.neutral + 1,
             total: this.state.total + 1,
           },
-          function () {
-            this.setState({
-              positivePercentage: Math.round(
-                (this.state.good / this.state.total) * 100
-              ),
-            });
-          }
+          this.updtaePositivePersentage
         );
         break;
       case "bad":
@@ -52,13 +48,7 @@ class Feedback extends Component {
             bad: this.state.bad + 1,
             total: this.state.total + 1,
           },
-          function () {
-            this.setState({
-              positivePercentage: Math.round(
-                (this.state.good / this.state.total) * 100
-              ),
-            });
-          }
+          this.updtaePositivePersentage
         );
         break;
       default:

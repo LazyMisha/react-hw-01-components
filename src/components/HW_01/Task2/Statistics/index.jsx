@@ -7,23 +7,25 @@ const getColor = () => {
 };
 
 const Statistics = ({ title, stats }) => {
+  let statElements = stats.map((stat) => {
+    return (
+      <li
+        key={stat.id}
+        className={styles.item}
+        style={{
+          backgroundColor: getColor(),
+        }}
+      >
+        <span className={styles.label}>{stat.label}</span>
+        <span className={styles.percentage}>{stat.percentage}%</span>
+      </li>
+    );
+  });
+
   return (
     <section className={styles.statistics}>
       <h2 className={styles.title}>{title}</h2>
-      <ul className={styles.statlist}>
-        {stats.map((obj) => (
-          <li
-            key={obj.id}
-            className={styles.item}
-            style={{
-              backgroundColor: getColor(),
-            }}
-          >
-            <span className={styles.label}>{obj.label}</span>
-            <span className={styles.percentage}>{obj.percentage}%</span>
-          </li>
-        ))}
-      </ul>
+      <ul className={styles.statlist}>{statElements}</ul>
     </section>
   );
 };
