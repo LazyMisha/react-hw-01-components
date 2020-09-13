@@ -27,7 +27,9 @@ const Header = () => {
             <Link to="/react-hw-01-components/feedback">Feedback</Link>
           </span>
           <span>
-            <Link to="/react-hw-01-components/phonebook">Phonebook</Link>
+            <Link to="/react-hw-01-components/phonebook">
+              Phonebook (with localStorage)
+            </Link>
           </span>
         </li>
       </ul>

@@ -14,6 +14,7 @@ const App = (props) => {
       <Switch>
         <>
           <Header />
+
           <Route
             path="/react-hw-01-components/statistics"
             render={() => (
