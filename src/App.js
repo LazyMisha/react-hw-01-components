@@ -7,6 +7,7 @@ import FriendList from "./components/HW_01/Task3/FriendList";
 import TransactionHistory from "./components/HW_01/Task4/TransactionHistory";
 import Feedback from "./components/HW_02/Task1/Feedback";
 import Phonebook from "./components/HW_02/Task2/Phonebook";
+import Gallery from "./components/HW_03/Task2/Gallery";
 
 const App = (props) => {
   return (
@@ -14,7 +15,6 @@ const App = (props) => {
       <Switch>
         <>
           <Header />
-
           <Route
             path="/react-hw-01-components/statistics"
             render={() => (
@@ -51,6 +51,7 @@ const App = (props) => {
             path="/react-hw-01-components/phonebook"
             component={Phonebook}
           />
+          <Route path="/react-hw-01-components/gallery" component={Gallery} />
         </>
       </Switch>
     </Router>

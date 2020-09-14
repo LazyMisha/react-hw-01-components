@@ -32,6 +32,12 @@ const Header = () => {
             </Link>
           </span>
         </li>
+        <li className={styles.link}>
+          <h3>HW 03</h3>
+          <span>
+            <Link to="/react-hw-01-components/gallery">Gallery</Link>
+          </span>
+        </li>
       </ul>
     </div>
   );
