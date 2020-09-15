@@ -44,7 +44,7 @@ const Gallery = () => {
     <div className={styles.Gallery}>
       <Searchbar onSubmit={handleFilterChange} />
       {isLoading ? <Loader /> : <ImageGallery items={items} />}
-      {items.length > 0 ? <Button onClick={handleLoadMore} /> : null}
+      {!isLoading > 0 ? <Button onClick={handleLoadMore} /> : null}
     </div>
   );
 };
