@@ -31,14 +31,20 @@ const Gallery = () => {
     setPage(page + 1);
     search(query, page + 1)
       .then((data) => setItems([...items, ...data.hits]))
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsLoading(false);
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
+      });
   };
 
   return (
     <div className={styles.Gallery}>
       <Searchbar onSubmit={handleFilterChange} />
       {isLoading ? <Loader /> : <ImageGallery items={items} />}
-      <Button onClick={handleLoadMore} />
+      {items.length > 0 ? <Button onClick={handleLoadMore} /> : null}
     </div>
   );
 };
