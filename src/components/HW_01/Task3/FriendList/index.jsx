@@ -1,24 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
-
-const getStatusColor = (isOnline) => {
-  return isOnline ? "#00ff00" : "#ff0000";
-};
+import FriendItem from "../FriendItem";
 
 const FriendList = ({ friends }) => {
-  let friendElement = friends.map((friend) => {
-    return (
-      <li key={friend.id} className={styles.item}>
-        <span
-          className={styles.status}
-          style={{ backgroundColor: getStatusColor(friend.isOnline) }}
-        />
-        <img className={styles.avatar} src={friend.avatar} alt="" />
-        <p className={styles.name}>{friend.name}</p>
-      </li>
-    );
-  });
+  let friendElement = friends.map((friend) => (
+    <FriendItem
+      id={friend.id}
+      avatar={friend.avatar}
+      name={friend.name}
+      isOnline={friend.isOnline}
+    />
+  ));
 
   return (
     <div className={styles.container}>

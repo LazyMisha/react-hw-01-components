@@ -12,6 +12,18 @@ const Gallery = () => {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [largeImageURL, setLargeImageURL] = useState("");
+
+  const handleClickImageItem = (image) => {
+    console.log(image);
+    setShowModal(true);
+    setLargeImageURL(image);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   const handleFilterChange = (text) => {
     setIsLoading(true);
@@ -43,8 +55,18 @@ const Gallery = () => {
   return (
     <div className={styles.Gallery}>
       <Searchbar onSubmit={handleFilterChange} />
-      {isLoading ? <Loader /> : <ImageGallery items={items} />}
-      {!isLoading > 0 ? <Button onClick={handleLoadMore} /> : null}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ImageGallery
+          handleClickImageItem={handleClickImageItem}
+          items={items}
+        />
+      )}
+      {!isLoading ? <Button onClick={handleLoadMore} /> : null}
+      {showModal ? (
+        <Modal largeImageURL={largeImageURL} onClose={handleCloseModal} />
+      ) : null}
     </div>
   );
 };
