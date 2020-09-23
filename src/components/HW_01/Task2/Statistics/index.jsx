@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import PropTypes from "prop-types";
 import StatisticItem from "../StatisticItem";
+import stats from "../../../../resources/statistical-data.json";
 
-const Statistics = ({ title, stats }) => {
+const Statistics = () => {
   let statElements = stats.map((stat) => (
     <StatisticItem
       key={stat.id}
@@ -14,15 +14,10 @@ const Statistics = ({ title, stats }) => {
 
   return (
     <section className={styles.statistics}>
-      <h2 className={styles.title}>{title}</h2>
+      <h2 className={styles.title}>Upload Stats</h2>
       <ul className={styles.statlist}>{statElements}</ul>
     </section>
   );
-};
-
-Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Statistics;

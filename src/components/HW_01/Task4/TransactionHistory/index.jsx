@@ -1,8 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
+import items from "../../../../resources/transaction-history.json";
 
-const TransactionHistory = ({ items }) => {
+const TransactionHistory = () => {
   let transactionElement = items.map((item) => {
     return (
       <tr key={item.id}>
@@ -25,10 +25,6 @@ const TransactionHistory = ({ items }) => {
       <tbody>{transactionElement}</tbody>
     </table>
   );
-};
-
-TransactionHistory.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
 };
 
 export default TransactionHistory;

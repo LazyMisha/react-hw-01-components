@@ -16,7 +16,6 @@ const Gallery = () => {
   const [largeImageURL, setLargeImageURL] = useState("");
 
   const handleClickImageItem = (image) => {
-    console.log(image);
     setShowModal(true);
     setLargeImageURL(image);
   };
@@ -35,7 +34,13 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    handleFilterChange("kyiv");
+    const loadOnStart = () => {
+      setQuery("kyiv");
+      search("kyiv", 1).then((data) => setItems(data.hits));
+      setQuery("kyiv");
+      setPage(1);
+    };
+    loadOnStart();
   }, []);
 
   const handleLoadMore = () => {
