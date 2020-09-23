@@ -9,7 +9,6 @@ const TransactionHistory = lazy(() =>
 const Feedback = lazy(() => import("./components/HW_02/Task1/Feedback"));
 const Phonebook = lazy(() => import("./components/HW_02/Task2/Phonebook"));
 const Gallery = lazy(() => import("./components/HW_03/Task2/Gallery"));
-const FilmSearch = lazy(() => import("./components/HW_04/FilmSearch"));
 
 export default [
   {
@@ -53,11 +52,5 @@ export default [
     label: "Gallery",
     hw: "03",
     component: Gallery,
-  },
-  {
-    path: "/film-search",
-    label: "Film Search",
-    hw: "04",
-    component: FilmSearch,
   },
 ];
