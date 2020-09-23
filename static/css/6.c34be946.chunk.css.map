@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.module.scss"],"names":[],"mappings":"AAAA,uBACE,wBAAyB,CACzB,WAAY,CACZ,aAAc,CACd,YAAa,CACd,GAGC,iBAAkB,CARpB,6BACE,WAAY,CACZ,iBAAkB,CAFpB,uBACE,cAAe","file":"6.c34be946.chunk.css","sourcesContent":[".items > p {\r\n  font-size: 150%;\r\n}\r\n"]}
